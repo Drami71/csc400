@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .button {
+                background-color: #008CBA; 
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <h1>Thank You!</h1>
+    <p>Form Submitted!</p>
+    <p>If more information is needed, you will be contacted at the email address you provided.</p>
+   
+    <a href="{{url_for("user_input")}}" >
+        <button type="button" class = "button">Submit another form</button>
+    </a>
+    
+</body>
+
+</html>
