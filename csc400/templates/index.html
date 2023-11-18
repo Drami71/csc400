@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+    <title>Form</title>
+</head>
+<body>
+ 
+    <div class="container-lg mt-4">
+        <div class="text-center">
+            <h2>Submit Your Information</h2>
+            <p class="lead">If you have any Questions before submitting, please email Rebecca Hedreen at 
+                <a href = "mailto: hedreenr1@southernct.edu">hedreenr1@southernct.edu</a>
+            </p>
+        </div>
+        <div class="row justify-content-center m-5">
+
+            <div class="col-lg-6">
+                <form id="submit_form" method="post" action="{{url_for("user_input")}}">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</p></label>
+                        <input type="text" class="form-control" id="name" name ="name" placeholder="e.g. First Last" required>
+                    </div>   
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name ="email" placeholder="e.g. email@example.com" required>
+                    </div> 
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title:</label>
+                        <input type="text" class="form-control" id="title" name ="title" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="doi" class="form-label">Include DOI if Available:</label>
+                        <input type="text" class="form-control" id="doi" name ="doi">
+                    </div>
+                    <div class="mb-3">
+                        <label for="department" class="form-label">Department:</label>
+                        <input type="text" class="form-control" id="department" name ="department">
+                    </div>
+                    <div class="mb-3">
+                        <label for="coauthor" class="form-label">Coauthors:</label>
+                        <input type="text" class="form-control" id="coauthor" name ="coauthor" placeholder="e.g. First Last">
+                    </div>
+                    <div class="mb-3">
+                        <label for="itemtype" class="form-label">Type of Document:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeRadios" id="typeRadios1" value="journal-article" checked>
+                            <label class="form-check-label" for="typeRadios1">
+                            Journal Article
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeRadios" id="typeRadios2" value="proceedings-article">
+                            <label class="form-check-label" for="typeRadios2">
+                            Conference Paper
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeRadios" id="typeRadios3" value="book">
+                            <label class="form-check-label" for="typeRadios3">
+                            Book 
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="typeRadios" id="typeRadios4" value="book-chapter">
+                            <label class="form-check-label" for="typeRadios4">
+                            Book Section
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="citation" class="form-label">Citations:</label>
+                        <input type="text" class="form-control" id="citation" name ="citation">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="peerreview" class="form-label">Peer Review:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="peergridRadios" id="gridRadios1" value="Peer Reviewed" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                            Peer Reviewed
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="peergridRadios" id="gridRadios2" value="Not Peer Reviewed">
+                            <label class="form-check-label" for="gridRadios2">
+                            Not Peer-Reviewed
+                            </label>
+                        </div>
+                    </div>
+                        
+                    <div class="mb-3">
+                      <button class="btn btn-primary" type="submit" name="submit">Submit form</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+</body>
+</html>
